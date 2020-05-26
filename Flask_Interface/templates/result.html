@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<h2>Verification des articles</h2>	
+		</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for the input</b></p>
+	<div class="results">
+
+
+		
+
+	{% if catego == 'sport' and prediction == 1%}
+	<h2 style="color:blue;">{{catego}}:Real</h2>
+	{% elif catego == 'sport' and prediction == 0 %}
+	<h2 style="color:blue;">{{catego}}:Fake</h2>
+
+
+	{% elif catego == 'business' and prediction == 1%}
+	<h2 style="color:blue;">{{catego}}:Real</h2>
+	{% elif catego == 'business' and prediction == 0 %}
+	<h2 style="color:blue;">{{catego}}:Fake</h2>
+
+
+	{% elif catego == 'entertainment' and prediction == 1%}
+	<h2 style="color:blue;">{{catego}}:Real</h2>
+	{% elif catego == 'entertainment' and prediction == 0 %}
+	<h2 style="color:blue;">{{catego}}:Fake</h2>
+
+
+	{% elif catego == 'tech' and prediction == 1%}
+	<h2 style="color:blue;">{{catego}}:Real</h2>
+	{% elif catego == 'tech' and prediction == 0 %}
+	<h2 style="color:blue;">{{catego}}:Fake</h2>
+
+
+	{% elif catego == 'politics' and prediction == 1 %}
+	<h2 style="color:blue;">{{catego}}:Real</h2>
+	{% elif catego == 'politics' and prediction == 0 %}
+	<h2 style="color:blue;">{{catego}}:Fake</h2>
+
+	{% endif %}
+
+
+
+	</div>
+
+</body>
+</html>
